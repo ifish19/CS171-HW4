@@ -1,6 +1,9 @@
 #include<iostream>
 using namespace std;
 
+//////////////////////////////////////////
+
+// EX04_01
 void array_size(int* size) {
 	cout << "How many numbers will you enter? ";
 	cin >> *size;
@@ -43,7 +46,24 @@ int computeAboveAvg(int* numbers, int size) {
 	return aboveAvg;
 }
 
+/////////////////////////////////////////////////////////
+
+// EX04_02
+int* doubleCapacity(const int* list, int size) {
+	int* newList = new int[2 * size];
+	for (int i = 0; i < size; i++) {
+		newList[i] = list[i];
+	}
+	delete [] list;
+
+	return newList;
+}
+
+/////////////////////////////////////////////////////
+
 int main() {
+
+	// EX04_01
 	int num;
 
 	array_size(&num);
@@ -52,5 +72,6 @@ int main() {
 	
 	cout << "The average of the entered numbers is " << computeAvg(numbers, num) << ".\n";
 	cout << "There are " << computeAboveAvg(numbers, num) << " numbers above the average.\n";
+
 
 }

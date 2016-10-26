@@ -1,3 +1,8 @@
+//////////////////////////////
+// Ian Fish
+// CS172
+///////////////////////////
+
 #include<iostream>
 using namespace std;
 
@@ -73,5 +78,11 @@ int main() {
 	cout << "The average of the entered numbers is " << computeAvg(numbers, num) << ".\n";
 	cout << "There are " << computeAboveAvg(numbers, num) << " numbers above the average.\n";
 
+	// EX04_02
+	int list[] = {5, 2, 7, 3};
+
+	doubleCapacity(list, 4);
+
+	// EX04_03
 
 }

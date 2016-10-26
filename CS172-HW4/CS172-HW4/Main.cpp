@@ -4,6 +4,8 @@
 ///////////////////////////
 
 #include<iostream>
+#include "Course.h"
+#include "Rectangle2D.h"
 using namespace std;
 
 //////////////////////////////////////////
@@ -84,5 +86,30 @@ int main() {
 	doubleCapacity(list, 4);
 
 	// EX04_03
+	double x = 5.3;
+	double y = 4.3;
+	double width = 4.1;
+	double height = 7.8;
+	Rectangle2D r1(x, y, width, height);
+	
+	cout << "r1 area: " << r1.getArea() << endl;
+	cout << "r1 perimeter: " << r1.getPerimeter() << endl;
 
+	double x2 = 6.6;
+	double y2 = 8.43;
+	double w2 = 3.33333;
+	double h2 = 4.0;
+	Rectangle2D r2(x2, y2, w2, h2);
+
+	cout << "r1 contains r2: " << r1.contains(r2) << endl;
+	cout << "r1 overlaps r2: " << r1.overlaps(r2) << endl;
+
+	// EX04_04
+	Course c1("CS172", 30);
+	c1.addStudent("Joe");
+	c1.addStudent("Sue");
+	c1.addStudent("Alex");
+	c1.dropStudent("Alex");
+
+	cout << c1.getStudents() << endl;
 }

@@ -12,7 +12,7 @@ public:
 	// Construct defult rectangle
 	Rectangle2D();
 	// Construct specified rectangle
-	Rectangle2D(double, double, double, double);
+	Rectangle2D(double x, double y, double w, double h);
 
 	// Getter and Setter for x & y
 	void setX(double);

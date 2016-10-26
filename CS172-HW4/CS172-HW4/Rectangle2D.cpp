@@ -85,5 +85,8 @@ bool Rectangle2D::contains(const Rectangle2D &r) const
 
 bool Rectangle2D::overlaps(const Rectangle2D &r) const
 {
-	
+	if (r.getX() + .5 * r.getWidth() <= getX() + Width || r.getX() - .5 * r.getWidth() >= X - .5 * Width && r.getY() + .5 * r.getHeight() <= getY() + Height || r.getY() - .5 * r.getHeight() >= Y - .5 * Height)
+		return true;
+	else
+		return false;
 }
